@@ -66,7 +66,7 @@ class contactsController extends Controller {
         $contact->save();
         return redirect('/');
     }
-
+//Удаляем запись
     public function deleteContact($id) {
         contacts::destroy($id);
         return redirect('/');

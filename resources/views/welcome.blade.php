@@ -8,21 +8,18 @@
     <title>Document</title>
 </head>
 <body>
+{{--Ничего не делает тк нет формы--}}
 <form action="/api/v1/notebook" method="post">
     @csrf
 <button>create</button>
 </form>
-<form action="/api/v1/notebook/4" method="post">
-    @csrf
-    @method('delete')
-    <button>Delete</button>
-</form>
+{{--создаем рандомную запись--}}
 <form action="/api/v1/notebook/random" method="post">
     @csrf
     <button>Create random</button>
 </form>
+{{--ссылка на все записи--}}
 <a href="/api/v1/notebook">note</a>
-<a href="/api/v1/notebook/3">note1</a>
 
 </body>
 </html>
