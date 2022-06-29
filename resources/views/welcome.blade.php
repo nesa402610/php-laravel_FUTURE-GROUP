@@ -12,6 +12,15 @@
 <form action="/api/v1/notebook" method="post">
     @csrf
 <button>create</button>
+    @if ($errors->any())
+        <div class="alert alert-danger">
+            <ul>
+                @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
+    @endif
 </form>
 {{--создаем рандомную запись--}}
 <form action="/api/v1/notebook/random" method="post">

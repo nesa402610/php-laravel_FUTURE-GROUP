@@ -18,6 +18,7 @@
             PHONE: {{$item->phone}}
             EMAIL: {{$item->email}}
             birthday: {{$item->birthday}}
+            <img width="200px" src="{{$item->photo}}" alt="">
         </a>
         {{--Удалаяет определенную запись--}}
         <form action="/api/v1/notebook/{{$item->id}}" method="post">
